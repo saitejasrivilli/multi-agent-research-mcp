@@ -1,6 +1,7 @@
 # 🔬 Multi-Agent Research Assistant
 
 AI-powered research using autonomous agents with LangGraph, RAG, and real-time evaluation.
+Live Demo: https://multi-agent-research-mcp-pr.streamlit.app/
 
 ![Quality Score](https://img.shields.io/badge/Quality-85%25-green)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
