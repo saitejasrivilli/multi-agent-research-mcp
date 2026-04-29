@@ -1,0 +1,18 @@
+{
+  "multi_agent": {
+    "overall": 0.9541000000000001,
+    "relevancy": 1.0,
+    "faithfulness": 0.99,
+    "completeness": 0.844,
+    "avg_latency_ms": 0.1,
+    "avg_cost_usd": 0.000799
+  },
+  "single_agent": {
+    "overall": 0.8678359999999999,
+    "relevancy": 1.0,
+    "faithfulness": 0.9306,
+    "completeness": 0.6948000000000001,
+    "avg_latency_ms": 0.07,
+    "avg_cost_usd": 0.000603
+  }
+}
