@@ -36,6 +36,8 @@ Live Demo: https://multi-agent-research-mcp-pr.streamlit.app/
 ## 🚀 Quick Start
 
 ### Local Development
+
+**Backend (FastAPI)**
 ```bash
 # Clone
 git clone https://github.com/saitejasrivilli/multi-agent-research-mcp
@@ -48,17 +50,54 @@ pip install -r requirements.txt
 cp .env.example .env
 # Add your GROQ_API_KEY and TAVILY_API_KEY
 
-# Run Streamlit
-streamlit run app.py
-
-# Run API (separate terminal)
+# Run API
 uvicorn src.api.main:app --reload
+# API available at http://localhost:8000
+```
+
+**Frontend (Next.js + TypeScript)**
+```bash
+cd frontend
+
+# Install
+npm install
+
+# Setup environment
+cp .env.local.example .env.local
+
+# Run dev server
+npm run dev
+# UI available at http://localhost:3000
+```
+
+**Streamlit UI** (legacy, still available)
+```bash
+streamlit run app.py
 ```
 
 ### Docker
 ```bash
 docker-compose up
 ```
+
+## 🎨 Frontend: Next.js + TypeScript
+
+Modern React UI for the multi-agent research system.
+
+**Features:**
+- Real-time progress tracking (see which agent is running)
+- Rich result display with sections, findings, and key takeaways
+- Quality metrics dashboard (RAGAS evaluation scores)
+- Export to PDF & Markdown
+- Dark theme with Tailwind CSS
+
+**Deploy to Vercel (free, 1-click):**
+```bash
+cd frontend
+vercel --prod
+```
+
+See [frontend/FRONTEND_README.md](frontend/FRONTEND_README.md) for detailed setup.
 
 ## 📡 API Endpoints
 
@@ -347,7 +386,13 @@ Poor-fit use cases without expert review: legal advice, medical advice, financia
 
 ## 📁 Project Structure
 ```
-├── app.py                 # Streamlit UI
+├── app.py                 # Streamlit UI (legacy)
+├── frontend/              # Next.js + TypeScript UI
+│   ├── src/app/
+│   │   ├── page.tsx      # Main research interface
+│   │   └── layout.tsx    # Root layout
+│   ├── public/           # Static assets
+│   └── package.json
 ├── src/
 │   ├── graph/            # LangGraph state machine
 │   ├── agents/           # Agent implementations
