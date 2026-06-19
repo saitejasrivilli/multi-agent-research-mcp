@@ -14,6 +14,7 @@ interface ResearchJob {
   status: string;
   progress: number;
   current_agent?: string;
+  error?: string;
   result?: {
     query: string;
     synthesis: {
